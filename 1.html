@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Страница 1</title>
+ </head>
+<body>
+	<canvas id="canvasId" width="500" height="100"
+style="border:1px solid magenta;"></canvas>
+<div id="result"></div>
+ <h1>Это страница 1</h1>
+<h4>Перейти на страницу 2.</h4>
+<p4><a href="2.html">Перейти</a>.</p4>
+<h4>Перейти на страницу 3.</h4>
+<p4><a href="3.html">Перейти</a>.</p4>
+<h4>Игра "Поле чудес".</h4>
+<p4><a href="qqq.html">Перейти</a>.</p4>
+<h4>Игра "KLAD".</h4>
+<p4><a href="KLAD.html">Перейти</a>.</p4>
+<h4>Игра ZMEIKA.</h4>
+<p4><a href="ZMEIKA.html">Перейти</a>.</p4>
+<script>
+var canvas = document.getElementById("canvasId");
+var ctx = canvas.getContext("2d");
+canvas.width = 500; // Установить ширину в 500 пикселов
+canvas.height = 100; // Установить высоту в 100 пикселов
+ctx.strokeStyle = "green"; // Установить цвет линии - зеленый
+ctx.fillStyle  =  "green";  //  Установить  цвет  заливки  фигуры -
+// синий
+ctx.shadowBlur = 10; // Установить размер тени - 10 пикселов
+ctx.shadowColor = "black"; // Установить цвет тени -
+// коричневый
+// Отображение прямоугольника (x, y, ширина, высота)
+ctx.rect(10, 30, 80, 40);
+ctx.fill(); // Заполнить цветом
+ctx.stroke(); // Отобразить контур
+</script>
+
+<div id="result"></div>
+<script>
+var canvas = document.getElementById("canvasId");
+var ctx = canvas.getContext("2d");
+ctx.strokeText("Зигзаг", 10, 10); // Написать текст
+ctx.stroke(); // Отобразить текст
+ctx.lineWidth = 5; // Установить ширину линии
+ctx.strokeStyle = "#0000ff"; // Установить цвет линии - синий
+var x = [40, 70, 100, 130, 160, 190, 210, 230, 250, 270]; // Массив
+var y = [40, 80, 40, 80, 40, 80, 40, 80, 40, 80];
+ctx.moveTo(10, 80); // Переместить
+ctx.beginPath(); // Начало пути
+for(var i = 0; i < x.length; i++) { // Цикл
+ctx.lineTo(x[i], y[i]);
+}
+ctx.stroke(); // Отобразить кривую
+</script>
+
+<div id="result"></div>
+<script>
+var canvas = document.getElementById("canvasId");
+var ctx = canvas.getContext("2d");
+ctx.lineWidth = 5; // Установить ширину линии
+function square(side, x, color) {
+ctx.strokeStyle = color; // Установить цвет линии - color
+ctx.strokeRect(x, 10, side, side); // Рисуем квадрат со
+// стороной side
+ctx.stroke(); // Нарисовать
+}
+square(15, 10, 'red'); // Квадрат 15 на 15
+square(25, 50, 'black'); // Квадрат 25 на 25
+square(35, 110, 'blue'); // Квадрат 35 на 35
+square(45, 180, 'gray'); // Квадрат 45 на 45
+</script>
+<center>
+  <h1> EXEMPL FORM1 </h1>
+   <form method="post" action="simple_form.php">
+    USERNAME
+   <input name="name" type="text">
+   <br>
+    <input type=submit value="OK">
+   </form>
+  </center>
+</body>
+</html>
